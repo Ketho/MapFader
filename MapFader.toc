@@ -1,0 +1,10 @@
+# ## Interface: 11302
+## Version: @project-version@
+## Title: MapFader
+## Notes: Fades the map when moving
+## Author: Ketho @ EU-Boulderfist
+## Dependencies: Blizzard_WorldMap
+## X-Curse-Project-ID: 334558
+## X-WoWI-ID: 24983
+
+MapFader.lua
