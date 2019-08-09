@@ -1,4 +1,4 @@
-# ## Interface: 11302
+## Interface: 11302
 ## Version: @project-version@
 ## Title: MapFader
 ## Notes: Fades the map when moving
