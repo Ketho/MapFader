@@ -1,6 +1,5 @@
-name: Release AddOn # description of this workflow, can be anything you want
+name: Release AddOn
 
-# triggers when pushing a tag
 on:
   push:
     tags:
@@ -9,11 +8,10 @@ on:
 env:
   CF_API_KEY: ${{ secrets.CF_API_KEY }}
   WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}
-  # for GitHub as a release, this secret is automatically provided to the workflow
   GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
-  release: # "release" is a job, you can name it anything you want
+  release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -21,3 +19,7 @@ jobs:
       - uses: BigWigsMods/packager@master
         with:
           args: -g classic
+
+      - uses: BigWigsMods/packager@master
+        with:
+          args: -g bc
